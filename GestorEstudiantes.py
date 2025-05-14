@@ -51,6 +51,24 @@ def insertar_registro(conexion):
     except Exception as e:
          print("\n \t Ocurrió un error al conectar a SQL Server: \n\n", e)
          
+def actualizar_registro(conexion):
+    try:
+        with conexion.cursor() as cursor:
+            SQL_QUERY = "{CALL Consultas.sp_ActualizarCatequizando(?,?,?)}"
+
+            l_ID = input("Ingrese el ID del catequizando a actualizar: \t")
+            l_NOMBRE = input("Ingrese el nuevo nombre: \t")
+            l_APELLIDO = input("Ingrese el nuevo apellido: \t")
+
+            cursor.execute(SQL_QUERY, (l_ID, l_NOMBRE, l_APELLIDO))
+            conexion.commit()
+
+            print("✅ Registro actualizado con éxito")
+
+    except Exception as e:
+        print("\n \t Ocurrió un error al conectar a SQL Server: \n\n", e)
+
+         
 def eliminar_registro(conexion):
     try:
         with conexion.cursor() as cursor:
