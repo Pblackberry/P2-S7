@@ -1,0 +1,1 @@
+GestorEstudiantes.insertar_registro(conexion)

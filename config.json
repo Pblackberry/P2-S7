@@ -1,0 +1,7 @@
+{
+    "name_server":"LAPTOP-OJJP1HNK",
+    "database":"Quito_Catequesis_DB_2025",
+    "username": "AdministradorParroquial",
+    "password": "EsJustoYNecesario",
+    "controlador_odbc": "SQL Server" 
+}
