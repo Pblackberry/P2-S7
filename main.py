@@ -1,10 +1,11 @@
 import pyodbc
 import json
+import GestorBDA
 import GestorEstudiantes
 
 def main():
     # Conexión a la BD
-    conexion = pyodbc.connect(GestorEstudiantes.ObtenerConexion())
+    conexion = pyodbc.connect(GestorBDA.ObtenerConexion())
 
     while True:
         print("\n\t** SISTEMA CRUD  Quito_Catequesis_DB_2025** \n")   
